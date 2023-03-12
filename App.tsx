@@ -1,20 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, Text, View } from "react-native";
+import { useFonts } from "expo-font";
+import { Home } from "./src/screens/Home";
+import { ThemeProvider } from "styled-components";
+import { theme } from "./src/theme/global";
 
 export default function App() {
+  const [fontsLoaded] = useFonts({
+    "SF-Pro-Bold": require("./assets/fonts/SF-Pro-Display-Bold.otf"),
+    "SF-Pro-Medium": require("./assets/fonts/SF-Pro-Display-Medium.otf"),
+    "SF-Pro-Regular": require("./assets/fonts/SF-Pro-Display-Regular.otf"),
+  });
+
+  if (!fontsLoaded) {
+    return null;
+  }
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <ThemeProvider theme={theme}>
+      <Home />
+    </ThemeProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
