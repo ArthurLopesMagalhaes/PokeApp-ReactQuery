@@ -1,11 +1,11 @@
 import styled from "styled-components/native";
 
 export const Container = styled.View`
+  flex-direction: row;
+  align-items: center;
   border-radius: 10px;
   padding: 20px 10px 20px 25px;
   background-color: ${(props) => props.theme.colors.backgroundDefaultInput};
-  flex-direction: row;
-  align-items: center;
 `;
 
 export const InputField = styled.TextInput.attrs((props) => ({
