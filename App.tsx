@@ -4,8 +4,9 @@ import { useFonts } from "expo-font";
 import { Home } from "./src/screens/Home";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./src/theme/global";
+import { gestureHandlerRootHOC } from "react-native-gesture-handler";
 
-export default function App() {
+function App() {
   const [fontsLoaded] = useFonts({
     "SF-Pro-Bold": require("./assets/fonts/SF-Pro-Display-Bold.otf"),
     "SF-Pro-Medium": require("./assets/fonts/SF-Pro-Display-Medium.otf"),
@@ -22,3 +23,5 @@ export default function App() {
     </ThemeProvider>
   );
 }
+
+export default gestureHandlerRootHOC(App);
