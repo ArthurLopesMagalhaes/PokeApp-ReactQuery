@@ -16,7 +16,7 @@ export const theme: DefaultTheme = {
     typeIce: "#61CEC0",
     typeNormal: "#9DA0AA",
     typePoison: "#A552CC",
-    typePhysic: "#EA5D60",
+    typePsychic: "#EA5D60",
     typeRock: "#BAAB82",
     typeSteel: "#417D9A",
     typeWater: "#4A90DA",
@@ -35,7 +35,7 @@ export const theme: DefaultTheme = {
     backgroundTypeIce: "#91D8DF",
     backgroundTypeNormal: "#B5B9C4",
     backgroundTypePoison: "#9F6E97",
-    backgroundTypePhysic: "#FF6568",
+    backgroundTypePsychic: "#FF6568",
     backgroundTypeRock: "#D4C294",
     backgroundTypeSteel: "#4C91B2",
     backgroundTypeWater: "#58ABF6",
@@ -44,6 +44,9 @@ export const theme: DefaultTheme = {
     backgroundDefaultInput: "#F2F2F2",
     backgroundPressedInput: "#E2E2E2",
     backgroundModal: "#17171780",
+
+    buttonSelected: "#EA5D60",
+    buttonUnselected: "#F2F2F2",
 
     textWhite: "#FFFFFF",
     textBlack: "#17171B",
