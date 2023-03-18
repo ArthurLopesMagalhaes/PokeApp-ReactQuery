@@ -17,7 +17,7 @@ declare module "styled-components" {
       typeIce: string;
       typeNormal: string;
       typePoison: string;
-      typePhysic: string;
+      typePsychic: string;
       typeRock: string;
       typeSteel: string;
       typeWater: string;
@@ -36,7 +36,7 @@ declare module "styled-components" {
       backgroundTypeIce: string;
       backgroundTypeNormal: string;
       backgroundTypePoison: string;
-      backgroundTypePhysic: string;
+      backgroundTypePsychic: string;
       backgroundTypeRock: string;
       backgroundTypeSteel: string;
       backgroundTypeWater: string;
@@ -45,6 +45,9 @@ declare module "styled-components" {
       backgroundDefaultInput: string;
       backgroundPressedInput: string;
       backgroundModal: string;
+
+      buttonSelected: string;
+      buttonUnselected: string;
 
       textWhite: string;
       textBlack: string;
