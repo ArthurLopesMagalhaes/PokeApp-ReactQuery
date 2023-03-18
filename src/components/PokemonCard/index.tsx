@@ -15,9 +15,13 @@ import DotesPattern from "../../assets/svgs/dots-pattern.svg";
 import PokeballSvg from "../../assets/svgs/pokeball.svg";
 import BugSvg from "../../assets/svgs/type-bug.svg";
 
-export const PokemonCard = () => {
+interface IPokemonCard {
+  onPress: () => void;
+}
+
+export const PokemonCard = ({ onPress }: IPokemonCard) => {
   return (
-    <Container>
+    <Container onPress={onPress} activeOpacity={0.8}>
       <DotesPattern style={{ position: "absolute", left: 80, top: 10 }} />
       <PokeballSvg
         style={{ position: "absolute", right: 0, top: 10 }}
