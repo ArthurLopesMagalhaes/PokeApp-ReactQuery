@@ -3,24 +3,16 @@ import { Container, Label } from "./styles";
 
 interface IButton {
   text: string;
-  selected?: boolean;
+  selected: boolean;
+  onPress: () => void;
 }
 
-export const Button = ({ text, selected }: IButton) => {
+export const Button = ({ text, selected, onPress }: IButton) => {
   const theme = useTheme();
 
   return (
-    <Container
-      activeOpacity={0.75}
-      bgColor={
-        selected ? theme.colors.buttonSelected : theme.colors.buttonUnselected
-      }
-    >
-      <Label
-        textColor={selected ? theme.colors.textWhite : theme.colors.textGray}
-      >
-        {text}
-      </Label>
+    <Container activeOpacity={0.75} selected={selected} onPress={onPress}>
+      <Label selected={selected}>{text}</Label>
     </Container>
   );
 };
