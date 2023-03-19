@@ -11,7 +11,7 @@ import {
 import PokemonPng from "../../assets/pngs/pokemon.png";
 import { Image } from "react-native";
 
-import DotesPattern from "../../assets/svgs/dots-pattern.svg";
+import DotsPatternSvg from "../../assets/svgs/dots-pattern.svg";
 import PokeballSvg from "../../assets/svgs/pokeball.svg";
 import BugSvg from "../../assets/svgs/type-bug.svg";
 
@@ -22,7 +22,7 @@ interface IPokemonCard {
 export const PokemonCard = ({ onPress }: IPokemonCard) => {
   return (
     <Container onPress={onPress} activeOpacity={0.8}>
-      <DotesPattern style={{ position: "absolute", left: 80, top: 10 }} />
+      <DotsPatternSvg style={{ position: "absolute", left: 80, top: 10 }} />
       <PokeballSvg
         style={{ position: "absolute", right: 0, top: 10 }}
         scaleX={1.2}
