@@ -25,6 +25,7 @@ export const FiltersScroll = ({
         data={data}
         keyExtractor={(item) => item.type}
         horizontal
+        contentContainerStyle={{ paddingVertical: 10, paddingHorizontal: 5 }}
         showsHorizontalScrollIndicator={false}
         ItemSeparatorComponent={() => <Divider right={10} />}
         renderItem={({ item }) => (

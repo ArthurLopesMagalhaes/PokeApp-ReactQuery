@@ -16,6 +16,7 @@ export const Icons = ({ icon: Icon, item, selected, onPress }: IIcon) => {
 
   return (
     <Container
+      style={selected && { elevation: 7 }}
       activeOpacity={0.75}
       onPress={onPress}
       backgroundColor={selected ? item.bgColor : theme.colors.backgroundWhite}
