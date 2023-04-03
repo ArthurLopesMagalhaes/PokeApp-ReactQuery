@@ -14,6 +14,18 @@ export const Description = styled.Text`
   font-family: ${(props) => props.theme.fontFamily.regular};
 `;
 
+export const RangeText = styled.Text`
+  color: ${(props) => props.theme.colors.textBlack};
+  font-size: ${(props) => props.theme.fontSize.md}px;
+  font-family: ${(props) => props.theme.fontFamily.bold};
+`;
+
+export const ButtonsContainer = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 14px;
+`;
+
 export const styles = StyleSheet.create({
   backgroundStyle: {
     backgroundColor: theme.colors.backgroundWhite,
