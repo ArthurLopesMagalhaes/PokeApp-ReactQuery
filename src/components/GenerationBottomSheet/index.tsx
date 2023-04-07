@@ -22,7 +22,6 @@ export const GenerationBottomSheet = forwardRef<BottomSheet>((props, ref) => {
     } else {
       setSelecteds((prevState) => [...prevState, index]);
     }
-    console.log(selecteds);
   };
 
   return (
