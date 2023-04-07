@@ -9,17 +9,25 @@ import {
 } from "./styles";
 
 import PokemonPng from "../../assets/pngs/pokemon.png";
-import { Image } from "react-native";
+import { Image, ImageSourcePropType } from "react-native";
 
 import DotsPatternSvg from "../../assets/svgs/dots-pattern.svg";
 import PokeballSvg from "../../assets/svgs/pokeball.svg";
 import BugSvg from "../../assets/svgs/type-bug.svg";
 
+export interface PokemonCardData {
+  number: string;
+  name: string;
+  types: string[];
+  img: ImageSourcePropType;
+}
+
 interface IPokemonCard {
+  data: PokemonCardData;
   onPress: () => void;
 }
 
-export const PokemonCard = ({ onPress }: IPokemonCard) => {
+export const PokemonCard = ({ data, onPress }: IPokemonCard) => {
   return (
     <Container onPress={onPress} activeOpacity={0.8}>
       <DotsPatternSvg style={{ position: "absolute", left: 80, top: 10 }} />
@@ -29,8 +37,8 @@ export const PokemonCard = ({ onPress }: IPokemonCard) => {
         scaleY={1.2}
       />
       <InfosContainer>
-        <Number>#001</Number>
-        <PokemonName>Bulbasaur</PokemonName>
+        <Number>#{data.number}</Number>
+        <PokemonName>{data.name}</PokemonName>
         <BadgesContainer>
           <Badge
             icon={BugSvg}
@@ -40,7 +48,7 @@ export const PokemonCard = ({ onPress }: IPokemonCard) => {
         </BadgesContainer>
       </InfosContainer>
       <ImgContainer>
-        <Image source={PokemonPng} />
+        <Image source={data.img} />
       </ImgContainer>
     </Container>
   );

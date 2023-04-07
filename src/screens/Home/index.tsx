@@ -16,6 +16,8 @@ import { GenerationBottomSheet } from "../../components/GenerationBottomSheet";
 import { SortBottomSheet } from "../../components/SortBottomSheet";
 import { BottomSheetMethods } from "@gorhom/bottom-sheet/lib/typescript/types";
 
+import { PokemonCardMock } from "../../mocks/PokemonCard.mock";
+
 export const Home = () => {
   const theme = useTheme();
   const generationSheetRef = useRef<BottomSheet>(null);
@@ -25,8 +27,6 @@ export const Home = () => {
   const openModal = (bottomSheet: React.RefObject<BottomSheetMethods>) => {
     bottomSheet.current?.snapToIndex(0);
   };
-
-  const [pokemons, setPokemons] = useState([0, 1, 2, 3, 4, 5, 6, 7]);
 
   return (
     <Background>
@@ -63,12 +63,14 @@ export const Home = () => {
         <Divider top={25} />
 
         <FlatList
-          data={pokemons}
-          keyExtractor={(item) => item.toString()}
+          data={PokemonCardMock}
+          keyExtractor={(item) => item.number.toString()}
           contentContainerStyle={{ paddingBottom: 70, paddingTop: 20 }}
           showsVerticalScrollIndicator={false}
           ItemSeparatorComponent={() => <Divider top={30} />}
-          renderItem={({ item }) => <PokemonCard onPress={() => null} />}
+          renderItem={({ item }) => (
+            <PokemonCard data={item} onPress={() => null} />
+          )}
         />
       </Container>
       <GenerationBottomSheet ref={generationSheetRef} />
