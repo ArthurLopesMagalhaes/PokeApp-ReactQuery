@@ -13,6 +13,7 @@ export const Container = styled.TouchableOpacity<IButtonStyles>`
   align-items: center;
   border-radius: 10px;
   height: 60px;
+  flex: 1;
 `;
 export const Label = styled.Text<IButtonStyles>`
   color: ${(props) =>
