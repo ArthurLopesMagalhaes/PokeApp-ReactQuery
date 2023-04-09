@@ -1,10 +1,8 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
 import { useFonts } from "expo-font";
-import { Home } from "./src/screens/Home";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./src/theme/global";
 import { gestureHandlerRootHOC } from "react-native-gesture-handler";
+import { AppRoutes } from "./src/routes";
 
 function App() {
   const [fontsLoaded] = useFonts({
@@ -19,7 +17,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Home />
+      <AppRoutes />
     </ThemeProvider>
   );
 }
