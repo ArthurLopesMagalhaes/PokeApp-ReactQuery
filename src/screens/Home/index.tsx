@@ -8,7 +8,7 @@ import FilterSvg from "../../assets/svgs/filter.svg";
 import { Divider } from "../../components/Divider";
 import { Input } from "../../components/Input";
 import { PokemonCard } from "../../components/PokemonCard";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { FilterBottomSheet } from "../../components/FilterBottomSheet";
 import { useTheme } from "styled-components";
 import BottomSheet from "@gorhom/bottom-sheet";
@@ -17,9 +17,13 @@ import { SortBottomSheet } from "../../components/SortBottomSheet";
 import { BottomSheetMethods } from "@gorhom/bottom-sheet/lib/typescript/types";
 
 import { PokemonCardMock } from "../../mocks/PokemonCard.mock";
+import { useNavigation } from "@react-navigation/native";
+import { StatusBar } from "expo-status-bar";
 
 export const Home = () => {
   const theme = useTheme();
+  const navigation = useNavigation();
+
   const generationSheetRef = useRef<BottomSheet>(null);
   const sortSheetRef = useRef<BottomSheet>(null);
   const filterSheetRef = useRef<BottomSheet>(null);
@@ -30,6 +34,7 @@ export const Home = () => {
 
   return (
     <Background>
+      <StatusBar style="dark" translucent />
       <Container>
         <FilterContainer>
           <GenerationSvg
@@ -48,12 +53,12 @@ export const Home = () => {
 
         <Divider top={35} />
 
-        <Title>Pokédex</Title>
+        <Title>Pokedex</Title>
 
         <Divider top={10} />
 
         <Description>
-          Search for Pokémon by name or using the National Pokédex number.
+          Search for Pokémon by name or using the National Pokedex number.
         </Description>
 
         <Divider top={25} />
@@ -69,7 +74,10 @@ export const Home = () => {
           showsVerticalScrollIndicator={false}
           ItemSeparatorComponent={() => <Divider top={30} />}
           renderItem={({ item }) => (
-            <PokemonCard data={item} onPress={() => null} />
+            <PokemonCard
+              data={item}
+              onPress={() => navigation.navigate("Profile")}
+            />
           )}
         />
       </Container>
