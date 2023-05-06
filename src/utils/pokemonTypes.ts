@@ -2,7 +2,7 @@ import { SvgProps } from "react-native-svg";
 import TypeBugSvg from "../assets/svgs/type-bug.svg";
 import TypeDarkSvg from "../assets/svgs/type-dark.svg";
 import TypeDragonSvg from "../assets/svgs/type-dragon.svg";
-import TypeEletricSvg from "../assets/svgs/type-eletric.svg";
+import TypeElectricSvg from "../assets/svgs/type-electric.svg";
 import TypeFairySvg from "../assets/svgs/type-fairy.svg";
 import TypeFightingSvg from "../assets/svgs/type-fighting.svg";
 import TypeFireSvg from "../assets/svgs/type-fire.svg";
@@ -24,7 +24,7 @@ const {
   typeBug,
   typeDark,
   typeDragon,
-  typeEletric,
+  typeElectric,
   typeFairy,
   typeFighting,
   typeFire,
@@ -52,7 +52,7 @@ export const pokemonTypes = [
   { type: "bug", icon: TypeBugSvg, bgColor: typeBug },
   { type: "dark", icon: TypeDarkSvg, bgColor: typeDark },
   { type: "dragon", icon: TypeDragonSvg, bgColor: typeDragon },
-  { type: "eletric", icon: TypeEletricSvg, bgColor: typeEletric },
+  { type: "electric", icon: TypeElectricSvg, bgColor: typeElectric },
   { type: "fairy", icon: TypeFairySvg, bgColor: typeFairy },
   { type: "fighting", icon: TypeFightingSvg, bgColor: typeFighting },
   { type: "fire", icon: TypeFireSvg, bgColor: typeFire },

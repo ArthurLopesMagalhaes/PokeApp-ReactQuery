@@ -6,7 +6,7 @@ declare module "styled-components" {
       typeBug: string;
       typeDark: string;
       typeDragon: string;
-      typeEletric: string;
+      typeElectric: string;
       typeFairy: string;
       typeFighting: string;
       typeFire: string;
@@ -25,7 +25,7 @@ declare module "styled-components" {
       backgroundTypeBug: string;
       backgroundTypeDark: string;
       backgroundTypeDragon: string;
-      backgroundTypeEletric: string;
+      backgroundTypeElectric: string;
       backgroundTypeFairy: string;
       backgroundTypeFighting: string;
       backgroundTypeFire: string;
