@@ -3,6 +3,7 @@ import {
   Container,
   TopContent,
   TopContentLeft,
+  Image,
   TopContentRight,
   PokemonNumber,
   PokemonName,
@@ -21,6 +22,10 @@ import { Badge } from "../../components/Badge";
 import { useTheme } from "styled-components";
 import { About } from "./About";
 import { useNavigation } from "@react-navigation/native";
+import { TopTabs } from "../../routes/topTabs.routes";
+
+import DotsPatternSvg from "../../assets/svgs/dots-pattern-big.svg";
+import CircleSvg from "../../assets/svgs/Circle.svg";
 
 export const Profile = () => {
   const theme = useTheme();
@@ -43,7 +48,17 @@ export const Profile = () => {
       </Header>
       <Divider top={30} />
       <TopContent>
-        <TopContentLeft source={Png} resizeMode="contain" />
+        <DotsPatternSvg
+          style={{ position: "absolute", right: 0, bottom: -30 }}
+        />
+        <TopContentLeft>
+          <CircleSvg
+            style={{ position: "absolute", bottom: 0, left: -10 }}
+            scaleX={0.8}
+            scaleY={0.8}
+          />
+          <Image source={Png} resizeMode="contain" />
+        </TopContentLeft>
 
         <TopContentRight>
           <PokemonNumber>#001</PokemonNumber>
@@ -62,10 +77,10 @@ export const Profile = () => {
           </BadgeContainer>
         </TopContentRight>
       </TopContent>
-      <Divider top={45} />
-      <BottomContent>
-        <About />
-      </BottomContent>
+      <Divider top={-5} />
+      {/* <BottomContent> */}
+      <TopTabs />
+      {/* </BottomContent> */}
     </Container>
   );
 };

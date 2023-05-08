@@ -13,6 +13,7 @@ import { BadgeContainer } from "../styles";
 import { Badge } from "../../../components/Badge";
 
 import Svg from "../../../assets/svgs/type-bug.svg";
+import { theme } from "../../../theme/global";
 
 export const About = () => {
   return (
@@ -22,7 +23,7 @@ export const About = () => {
         back. By soaking up the sun's rays, the seed grows progressively larger.
       </Description>
       <Divider top={30} />
-      <TableTitle>Pokedéx Data</TableTitle>
+      <TableTitle>Pokedex Data</TableTitle>
       <Table>
         <TableRow>
           <LeftLabel>Species</LeftLabel>
@@ -47,9 +48,18 @@ export const About = () => {
         <TableRow>
           <LeftLabel>Weaknesses</LeftLabel>
           <BadgeContainer>
-            <Badge icon={Svg} stylesProps={{ backgroundColor: "red" }} />
-            <Badge icon={Svg} stylesProps={{ backgroundColor: "red" }} />
-            <Badge icon={Svg} stylesProps={{ backgroundColor: "red" }} />
+            <Badge
+              icon={Svg}
+              stylesProps={{ backgroundColor: theme.colors.typeGrass }}
+            />
+            <Badge
+              icon={Svg}
+              stylesProps={{ backgroundColor: theme.colors.typeGrass }}
+            />
+            <Badge
+              icon={Svg}
+              stylesProps={{ backgroundColor: theme.colors.typeGrass }}
+            />
           </BadgeContainer>
         </TableRow>
         <Divider top={10} />

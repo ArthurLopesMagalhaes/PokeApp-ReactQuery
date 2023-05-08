@@ -16,7 +16,10 @@ export const TopContent = styled.View`
   padding: 0px 40px 0 40px;
 `;
 
-export const TopContentLeft = styled.Image`
+export const TopContentLeft = styled.View`
+  width: 100px;
+`;
+export const Image = styled.Image`
   width: 100px;
 `;
 
