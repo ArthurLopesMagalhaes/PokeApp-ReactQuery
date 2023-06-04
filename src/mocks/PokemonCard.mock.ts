@@ -5,7 +5,7 @@ import PokemonPng from "../assets/pngs/pokemon.png";
 export const PokemonCardMock: PokemonCardData[] = [
   {
     number: "001",
-    name: "Bulbassaur",
+    name: "Bulbasaur",
     types: ["grass"],
     img: PokemonPng,
   },

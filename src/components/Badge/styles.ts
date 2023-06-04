@@ -2,7 +2,7 @@ import styled from "styled-components/native";
 
 export interface IBadgeStyle {
   backgroundColor: string;
-  label: boolean;
+  label?: boolean;
 }
 
 export const Container = styled.View<IBadgeStyle>`
